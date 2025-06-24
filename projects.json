@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Real Estate Management System",
+    "description": "A full-stack property listing platform built using Python, MySQL, and HTML/CSS. It allows users to view, filter, and manage real estate properties with admin control.",
+    "link": "#"
+  },
+  {
+    "title": "IoT-Based Temperature & Humidity Monitoring",
+    "description": "An ESP32 + DHT11-powered system that collects and displays real-time environmental data. Designed for remote monitoring using a simple web interface.",
+    "link": "#"
+  },
+  {
+    "title": "Personal Portfolio Website",
+    "description": "A responsive and dynamic personal website showcasing skills, projects, and contact details. Built using HTML, CSS, JavaScript, and JSON-based data loading.",
+    "link": "#"
+  },
+  {
+    "title": "AI Chatbot Tutor (CodeTutor)",
+    "description": "An interactive coding assistant that provides explanations, examples, and debugging help for students. Integrated with an AI model using HuggingFace APIs.",
+    "link": "#"
+  },
+  {
+    "title": "HireSage",
+    "description": "An AI-powered job readiness assistant built with Streamlit and Hugging Face. It offers resume analysis, interview preparation, skill gap insights, and flashcards.",
+    "link": "https://huggingface.co/spaces/neuronova/hire-sage"
+  }
+]
