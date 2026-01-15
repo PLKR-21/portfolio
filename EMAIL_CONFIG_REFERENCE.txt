@@ -1,0 +1,144 @@
+// ============================================================
+// EMAIL CONFIGURATION - QUICK SETUP GUIDE
+// ============================================================
+// 
+// This file shows exactly where to paste your EmailJS credentials
+// Follow the EMAIL_SETUP.md guide to get these values
+//
+
+// STEP 1: Get these values from EmailJS Dashboard
+// ============================================================
+
+const EMAILJS_CONFIG = {
+    // ✅ Get from: Dashboard → Account → Public Key
+    PUBLIC_KEY: "2dGwyRq7KgaJLnBei",
+    
+    // ✅ Get from: Dashboard → Email Services → Service ID
+    SERVICE_ID: "service_qh1jkwg",
+    
+    // ⏳ TODO: Get from: Dashboard → Email Templates → Template ID
+    // Follow STUDENT SETUP below to create and get this value
+    TEMPLATE_ID: "template_ezemsjt", // Will update after creating template
+    
+    // Your email address (where you want to receive messages)
+    RECEIVER_EMAIL: "papagarilaxmikanthreddy@gmail.com"
+};
+
+// STEP 2: Already Configured ✅
+// ============================================================
+// 
+// Your credentials are already set in script.js:
+// ✅ PUBLIC_KEY: "2dGwyRq7KgaJLnBei" 
+// ✅ SERVICE_ID: "service_qh1jkwg"
+// ⏳ TEMPLATE_ID: You'll add this after creating the template
+//
+// Just follow STUDENT QUICK SETUP section above!
+//
+
+// STEP 3: Update script.js with Template ID
+// ============================================================
+// 
+// Once you have your TEMPLATE ID from EmailJS, update script.js:
+//
+// Search for line ~32 and find this code:
+//
+//     emailjs.send(
+//         "service_qh1jkwg",  
+//         "YOUR_TEMPLATE_ID_HERE", ← REPLACE THIS
+//         {
+//             ...
+//         }
+//     )
+//
+// Replace "YOUR_TEMPLATE_ID_HERE" with your actual Template ID
+// Example: "template_abc123xyz"
+//
+// STEP 4: Test Your Setup ✅
+// ============================================================
+// 
+// 1. Save script.js
+// 2. Open your portfolio website in browser
+// 3. Scroll to "Get In Touch" section
+// 4. Fill in the contact form with test data
+// 5. Click "Send Message"
+// 6. Check your email inbox
+// 7. If you got the email, you're all set! 🎉
+//
+
+// STUDENT QUICK SETUP: Create Email Template in 2 Minutes ⚡
+// ============================================================
+//
+// 1. Go to: https://www.emailjs.com/
+// 2. Login to your Dashboard
+// 3. Click "Email Templates" (left menu)
+// 4. Click "Create New Template" button
+// 5. Name it: "portfolio_contact"
+// 6. In the template content, use this structure:
+//
+//    SUBJECT LINE:
+//    New Message from {{from_name}}
+//
+//    EMAIL CONTENT:
+//    -------------------------------------------
+//    From: {{from_name}}
+//    Email: {{from_email}}
+//    Subject: {{subject}}
+//    
+//    Message:
+//    {{message}}
+//    -------------------------------------------
+//
+// 7. Click "Save" button
+// 8. Copy the TEMPLATE ID (shown as template_xxxxx)
+// 9. Replace "template_XXXXXXXXX" above with your ID
+// 10. Done! Email automation is ready ✅
+//
+// 
+// EXAMPLE: If your template ID is template_abc123xyz
+// Change: TEMPLATE_ID: "template_XXXXXXXXX",
+// To:     TEMPLATE_ID: "template_abc123xyz",
+//
+//
+
+// QUICK REFERENCE: Template Variables
+// ============================================================
+//
+// These variables from your contact form are used in the email:
+//
+// {{from_name}}   ← Visitor's Name
+// {{from_email}}  ← Visitor's Email
+// {{subject}}     ← Message Subject
+// {{message}}     ← Full Message Content
+//
+// Use these EXACTLY in your email template!
+// Copy-paste from above STUDENT QUICK SETUP section.
+//
+
+// ============================================================
+// TROUBLESHOOTING FOR STUDENTS
+// ============================================================
+// 
+// ❌ "Emails not sending?"
+//    → Make sure you created the template in EmailJS
+//    → Double-check TEMPLATE_ID is correct
+//    → Check browser console: Press F12 → Console tab
+//
+// ❌ "Template not created?"
+//    → Go to: https://www.emailjs.com/
+//    → Click Dashboard → Email Templates
+//    → Click "Create New Template"
+//    → Copy the template ID exactly
+//
+// ❌ "Getting error about PUBLIC_KEY?"
+//    → Check EMAIL_CONFIG_REFERENCE.txt has correct PUBLIC_KEY
+//    → Your key is: 2dGwyRq7KgaJLnBei ✅
+//
+// ✅ "Everything working?"
+//    → Congratulations! 🎉 Your portfolio emails are live!
+//    → Messages will arrive in your inbox
+//
+// Need more help?
+// 1. Check: https://www.emailjs.com/docs/
+// 2. Email students tutorial: https://bit.ly/emailjs-tutorial
+//
+// ============================================================
