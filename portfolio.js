@@ -32,6 +32,7 @@
         console.log('✓ Portfolio loaded successfully');
         setupContactForm();
         setupSmoothScroll();
+        setupMobileMenu();
     });
 
     // Contact Form Handler
@@ -110,6 +111,35 @@
         
         console.log('✓ Email sent via Formspree');
         return response.json();
+    }
+
+    // Mobile Menu Handler
+    function setupMobileMenu() {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        if (!hamburger || !navLinks) return;
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('header')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
     }
 
     // Notification System

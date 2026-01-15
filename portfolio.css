@@ -57,6 +57,37 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    z-index: 10;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+    z-index: 11;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2.5px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 .nav-links {
@@ -813,9 +844,41 @@ section {
         font-size: 1.4rem;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     .nav-links {
-        gap: 1.2rem;
-        font-size: 0.9rem;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--bg-dark);
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        list-style: none;
+        z-index: 9;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .nav-links a::after {
+        display: none;
     }
 
     .hero {
@@ -985,6 +1048,10 @@ section {
 
     .header {
         padding: 0.6rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
     }
 
     .navbar {
@@ -997,13 +1064,53 @@ section {
         font-weight: 700;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+    }
+
     .nav-links {
-        gap: 0.8rem;
-        font-size: 0.75rem;
+        display: none;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background: var(--bg-dark);
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        list-style: none;
+        z-index: 9;
+        max-height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid var(--border-color);
     }
 
     .nav-links a {
-        display: inline-block;
+        display: block;
+        padding: 1rem 1rem;
+        font-size: 0.9rem;
+        color: var(--text-light);
+    }
+
+    .nav-links a:hover {
+        background: rgba(59, 130, 246, 0.1);
+    }
+
+    .nav-links a::after {
+        display: none;
     }
 
     .hero {
